@@ -1,0 +1,40 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: 'Inter';
+}
+
+html {
+    /*This defines what 1rem is*/
+    font-size: 62.5%; /*1 rem = 10px; 10px/16px = 62.5% */
+
+    @media only screen and (max-width: 37.5em) { /* width < 1200? */
+        font-size: 56.25%; /*1 rem = 9px, 9/16 = 50%*/
+    }
+
+    @media only screen and (max-width: 56.25em) { /* width < 900? */
+        font-size: 50%; /*1 rem = 8px, 8/16 = 50% */
+    }
+    
+    @media only screen and (min-width: 112.5em) {
+        font-size: 75%; /*1rem = 12, 12/16 */
+    }
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #FAFCFD;
+    padding: 3rem;
+    overflow-x: hidden;
+
+    @media only screen and (max-width: 56.25em) {
+        padding: 0;
+    }
+}
+.checkbox Input:checked {
+    border-color: red;
+    background-color:red;
+}
